@@ -1,0 +1,149 @@
+:root {
+    --Soft-blue: hsl(215, 51%, 70%);
+    --Cyan: hsl(178, 100%, 50%);
+    --main-BG: hsl(217, 54%, 11%);
+    --card-BG: hsl(216, 50%, 16%);
+    --line: hsl(215, 32%, 27%);
+    --White: hsl(0, 0%, 100%);
+    font-size: 18px;
+    font-family: 'Outfit', sans-serif;
+}
+
+body{
+    background-color: var(--main-BG);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+}
+.container{
+    background-color: var(--card-BG);
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1em;
+    filter: drop-shadow(20px 20px 20px hsl(214, 61%, 9%));
+}
+.card {
+    background-color: var(--card-BG);
+    width: 300px;
+    height: auto;
+}
+
+.card-image {
+    background-image: url(./images/image-equilibrium.jpg);
+    background-size: cover;
+    background-position: center;
+    width: 300px;
+    height: 300px;
+    border-radius: 10px;
+}
+
+.card-image:hover {
+    filter: brightness(2.5);
+   
+}
+
+.card-title {
+    color: var(--White);
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+.card-title:hover {
+    color: var(--Cyan);
+}
+
+.card-description {
+    color: var(--Soft-blue);
+    font-weight: 300;
+}
+
+.card-info{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-price {
+    color: var(--Cyan);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 1.2em;
+}
+
+.card-price img {
+    width: 15px;
+    height: 20px;
+    margin-right: 0.5em;
+}
+
+.card-date {
+    color: var(--Soft-blue);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 1em;
+}
+
+.card-date img {
+    width: 20px;
+    height: 20px;
+    margin-right: 0.5em;
+}
+
+hr {
+    width: 100%;
+    border: 1px solid var(--line);
+    margin: 0;
+}
+
+.card-creater {
+    font-size: 0.9em;
+    font-weight: 300;
+    color: var(--Soft-blue);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 1em;
+}
+
+.card-creater img {
+    width: 40px;
+    height: 40px;
+    border: 1px solid var(--White);
+    border-radius: 50%;
+    margin-right: 0.5em;
+}
+
+.card-creater a {
+    color: var(--White);
+    text-decoration: none;
+}
+
+.card-creater a:hover {
+    color: var(--Cyan);
+}
+
+.attribution {
+    font-size: 0.8em;
+    color: var(--Soft-blue);
+    margin-top: 1.5em;
+}
+
+.attribution a {
+    color: var(--White);
+    text-decoration: none;
+}
+
+.attribution a:hover {
+    color: var(--Cyan);
+}
