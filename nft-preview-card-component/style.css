@@ -20,7 +20,7 @@ body{
 }
 .container{
     background-color: var(--card-BG);
-    width: 300px;
+    width: 320px;
     height: auto;
     border-radius: 10px;
     display: flex;
@@ -32,7 +32,7 @@ body{
 }
 .card {
     background-color: var(--card-BG);
-    width: 300px;
+    width: 320px;
     height: auto;
 }
 
@@ -40,8 +40,8 @@ body{
     background-image: url(./images/image-equilibrium.jpg);
     background-size: cover;
     background-position: center;
-    width: 300px;
-    height: 300px;
+    width: 320px;
+    height: 320px;
     border-radius: 10px;
 }
 
