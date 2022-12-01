@@ -47,6 +47,7 @@ body{
     flex-direction: column;
     justify-content: center;
     width: 80%;
+    height: auto;
     padding: 16px 32px;
 }
 
