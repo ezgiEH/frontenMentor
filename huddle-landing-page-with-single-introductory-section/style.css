@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap');
+
+/*RESET CSS*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/*RESET CSS*/
+/*ROOT*/
+:root{
+    --Violet: hsl(257, 40%, 49%);
+    --Soft-Magenta: hsl(300, 69%, 71%);
+    --White : hsl(0, 0%, 100%);
+}
+/*ROOT*/
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+    padding: 4rem;
+    background-image: url(./images/bg-desktop.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: var(--Violet);
+    font-size: 16px
+}
+
+nav{
+    align-self: start;
+}
+
+main{
+    max-width: 90rem;
+    padding: 6rem 0rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.left-component{
+    min-width: 23rem;
+}
+.left-component img{
+    width: 55rem;
+}
+
+.right-component{
+    width: 30rem;
+}
+.header{
+    font-family: 'Poppins',sans-serif;
+    font-size: calc(1rem + 1.5vw);
+    font-weight: 600;
+    color: var(--White);
+    margin-bottom: 2rem;
+}
+.description {
+    font-family: 'Open Sans',sans-serif;
+    font-size: calc(1rem);
+    font-weight: 400;
+    color: var(--White);
+    margin-bottom: 2rem;
+}
+
+
+button{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 1rem 4rem;
+    border-radius: 3rem;
+    border: none;
+    color: var(--Violet);
+    box-shadow: 0.2rem 0.2rem 0.4rem rgba(0, 0, 0, 0.1);
+}
+button:hover{
+    background-color: var(--Soft-Magenta);
+    color: var(--White);
+}
+footer{
+    right: 1rem;
+}
+.icons{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.icon{
+    border-radius: 50%;
+    color: var(--White);
+}
+.icon:hover{
+    color: var(--Soft-Magenta);
+}
+@media screen and (max-width: 768px){
+    body{
+        background-image: url(./images/bg-mobile.svg);
+        height: auto;
+    }
+    main{
+        flex-direction: column;
+        width: 23rem;
+    }
+    .right-component{
+        width: 20rem;
+        text-align: center;
+    }
+}
