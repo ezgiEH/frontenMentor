@@ -1,0 +1,146 @@
+@font-face
+    font-family: 'Libre Franklin'
+    src: url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap')
+
+$font-stack: 'Libre Franklin', sans-serif
+
+$Blue: hsl(223, 87%, 63%)
+$Pale-Blue: hsl(223, 100%, 88%)
+$Light-Red: hsl(354, 100%, 66%)
+$Gray: hsl(0, 0%, 59%)
+$Very-Dark-Blue: hsl(209, 33%, 12%)
+
+
+body
+    font-family: $font-stack
+    color: $Very-Dark-Blue
+    font-size: 20px
+    height: 100vh
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    padding: 1rem
+
+main
+    width: 90rem
+
+section
+    max-width: 90rem
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    margin: 2rem 0
+
+.title
+    
+    header
+        color:$Gray
+        font-size: 3rem
+        font-weight: 300
+    span
+        color:$Very-Dark-Blue
+        font-weight: 700
+    
+.form
+    width: 100%
+
+    .email
+        width: 30rem
+        height: 1rem
+        border-radius: 5rem
+        border: 0.1rem solid $Pale-Blue
+        padding: 1rem
+
+    .email.error
+        border: 0.1rem solid $Light-Red
+    
+    .error-message
+        position: absolute
+        font-size: 0.8rem
+        color: $Light-Red
+        margin-left: 2rem
+
+    .hide
+        display: none 
+
+    button
+        width: 10rem
+        height: 3rem
+        padding: 1rem
+        background-color: $Blue
+        color:  #fff
+        cursor: pointer
+        border: none
+        border-radius: 5rem
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px
+   
+    button:hover
+        background-color: $Pale-Blue
+        color: $Blue
+    
+.dashboard
+    overflow: hidden
+    img
+        width: 42rem
+
+.footer
+    font-size: 1rem
+    color: $Gray
+
+    .social 
+        margin: 1rem 0 
+        
+        ion-icon   
+            padding: 0.4rem
+            border: 0.1rem solid $Pale-Blue
+            border-radius: 50%
+            color: $Blue
+            cursor: pointer
+            
+        ion-icon:hover
+            color: #fff
+            background-color: $Blue   
+
+@media only screen and (min-width: 300px) and (max-width: 1440px)
+    body 
+        height: auto
+        padding: 1rem      
+    main
+        width: 22rem
+        height: auto
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: center
+
+    .title
+        text-align: center
+        header
+            font-size: 2rem
+        p
+            font-size: 1rem
+
+    .form
+        form
+            width: 100%
+            display: flex
+            flex-direction: column
+            align-items: center
+            justify-content: center
+        .email
+            width: 80%
+            margin-bottom: 2rem 
+
+        .error-message
+            margin-left: 0
+            margin-bottom: 1rem
+
+        button
+            width: 90%
+
+    .dashboard
+        width: 22rem   
+        img
+            width: 100%

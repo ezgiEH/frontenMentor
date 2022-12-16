@@ -1,0 +1,150 @@
+@font-face {
+  font-family: "Libre Franklin";
+  src: url("https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap");
+}
+body {
+  font-family: "Libre Franklin", sans-serif;
+  color: hsl(209deg, 33%, 12%);
+  font-size: 20px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+main {
+  width: 90rem;
+}
+
+section {
+  max-width: 90rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 2rem 0;
+}
+
+.title header {
+  color: hsl(0deg, 0%, 59%);
+  font-size: 3rem;
+  font-weight: 300;
+}
+.title span {
+  color: hsl(209deg, 33%, 12%);
+  font-weight: 700;
+}
+
+.form {
+  width: 100%;
+}
+.form .email {
+  width: 30rem;
+  height: 1rem;
+  border-radius: 5rem;
+  border: 0.1rem solid hsl(223deg, 100%, 88%);
+  padding: 1rem;
+}
+.form .email.error {
+  border: 0.1rem solid hsl(354deg, 100%, 66%);
+}
+.form .error-message {
+  position: absolute;
+  font-size: 0.8rem;
+  color: hsl(354deg, 100%, 66%);
+  margin-left: 2rem;
+}
+.form .hide {
+  display: none;
+}
+.form button {
+  width: 10rem;
+  height: 3rem;
+  padding: 1rem;
+  background-color: hsl(223deg, 87%, 63%);
+  color: #fff;
+  cursor: pointer;
+  border: none;
+  border-radius: 5rem;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+.form button:hover {
+  background-color: hsl(223deg, 100%, 88%);
+  color: hsl(223deg, 87%, 63%);
+}
+
+.dashboard {
+  overflow: hidden;
+}
+.dashboard img {
+  width: 42rem;
+}
+
+.footer {
+  font-size: 1rem;
+  color: hsl(0deg, 0%, 59%);
+}
+.footer .social {
+  margin: 1rem 0;
+}
+.footer .social ion-icon {
+  padding: 0.4rem;
+  border: 0.1rem solid hsl(223deg, 100%, 88%);
+  border-radius: 50%;
+  color: hsl(223deg, 87%, 63%);
+  cursor: pointer;
+}
+.footer .social ion-icon:hover {
+  color: #fff;
+  background-color: hsl(223deg, 87%, 63%);
+}
+
+@media only screen and (min-width: 300px) and (max-width: 1440px) {
+  body {
+    height: auto;
+    padding: 1rem;
+  }
+  main {
+    width: 22rem;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .title {
+    text-align: center;
+  }
+  .title header {
+    font-size: 2rem;
+  }
+  .title p {
+    font-size: 1rem;
+  }
+  .form form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .form .email {
+    width: 80%;
+    margin-bottom: 2rem;
+  }
+  .form .error-message {
+    margin-left: 0;
+    margin-bottom: 1rem;
+  }
+  .form button {
+    width: 90%;
+  }
+  .dashboard {
+    width: 22rem;
+  }
+  .dashboard img {
+    width: 100%;
+  }
+}/*# sourceMappingURL=main.css.map */
