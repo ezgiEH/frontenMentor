@@ -101,7 +101,7 @@ section {
   background-color: hsl(223deg, 87%, 63%);
 }
 
-@media only screen and (min-width: 300px) and (max-width: 1440px) {
+@media only screen and (min-width: 300px) and (max-width: 760px) {
   body {
     height: auto;
     padding: 1rem;
