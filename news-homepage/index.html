@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+  <link rel="stylesheet" href="./css/main.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+
+  <title>Frontend Mentor | News homepage</title>
+
+</head>
+
+<body>
+  <!-- Sidebar -->
+  <div id="sidebar" class="sidebar">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">
+      <img src="./assets/images/icon-menu-close.svg" alt="closebtn"></a>
+    <div class="sidebar-menu">
+      <a href="#">Home</a>
+      <a href="#">New</a>
+      <a href="#">Popular</a>
+      <a href="#">Trending</a>
+      <a href="#">Categories</a>
+    </div>
+  </div>
+  <!-- Sidebar -->
+  <main>
+    <!-- navbar -->
+    <nav>
+      <img src="./assets/images/logo.svg" alt="logo">
+      <div class="nav-menu">
+        <a href="#">Home</a>
+        <a href="#">New</a>
+        <a href="#">Popular</a>
+        <a href="#">Trending</a>
+        <a href="#">Categories</a>
+      </div>
+      <button class="openbtn" onclick="openNav()">
+        <img src="./assets/images/icon-menu.svg"></button>
+    </nav>
+    <!-- navbar -->
+    <section class="top">
+
+      <div class="big-new-card">
+        <div class="big-new-image">
+          <picture>
+            <source media="(max-width:375px)" srcset="./assets/images/image-web-3-mobile.jpg">
+            <img src="./assets/images/image-web-3-desktop.jpg" alt="big-new">
+          </picture>
+        </div>
+        <div class="big-new-header">
+          <header>The Bright Future of Web 3.0?</header>
+          <div class="big-new-title">
+            <p>We dive into the next evolution of the
+              web that claims to put the power of the
+              platforms back into the hands of the people.
+              But is it really fulfilling its promise?</p>
+            <button>Read more</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="side-news">
+        <h2>New</h2>
+        <div class="side-card">
+          <a href="#"><header>Hydrogen VS Electric Cars</header></a>
+          <p>Will hydrogen-fueled cars ever catch up to EVs?</p>
+        </div>
+        <hr>
+        <div class="side-card">
+          <a href="#"><header>The Downsides of AI Artistry</header></a>
+          <p>What are the possible adverse effects of on-demand AI image generation?</p>
+        </div>
+        <hr>
+        <div class="side-card">
+          <a href="#"><header>Is VC Funding Drying Up?</header></a>
+          <p>Private funding by VC firms is down 50% YOY. We take a look at what that means.</p>
+        </div>
+      </div>
+
+    </section>
+
+    <section class="bottom">
+
+      <div class="news-card">
+        <div class="card-image"><img src="./assets/images/image-retro-pcs.jpg">
+        </div>
+        <div class="card-title">
+          <h3>01</h3>
+          <a href="#">
+            <header>Reviving Retro PCs</header>
+          </a>
+          <p>What happens when old PCs are given modern upgrades?</p>
+        </div>
+      </div>
+      <div class="news-card">
+        <div class="card-image"><img src="./assets/images/image-top-laptops.jpg">
+        </div>
+        <div class="card-title">
+          <h3>02</h3>
+          <a href="#">
+            <header>Top 10 Laptops of 2022</header>
+          </a>
+          <p>Our best picks for various needs and budgets.</p>
+        </div>
+      </div>
+      <div class="news-card">
+        <div class="card-image"><img src="./assets/images/image-gaming-growth.jpg">
+        </div>
+        <div class="card-title">
+          <h3>03</h3>
+          <a href="#">
+            <header>The Growth of Gaming</header>
+          </a>
+          <p>How the pandemic has sparked fresh opportunities.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+</body>
+<script>
+  function openNav() {
+    document.getElementById("sidebar").style.width = "220px";
+
+  }
+
+  function closeNav() {
+    document.getElementById("sidebar").style.width = "0";
+    document.getElementById("main").style.marginLeft = "0";
+  }
+</script>
+
+</html>

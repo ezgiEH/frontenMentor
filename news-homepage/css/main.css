@@ -1,0 +1,243 @@
+@font-face {
+  font-family: "Inter", sans-serif;
+  src: url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap");
+}
+body {
+  font-family: "Inter", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  color: hsl(240deg, 100%, 5%);
+  background: hsl(36deg, 100%, 99%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+}
+
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  background-color: hsl(36deg, 100%, 99%);
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 4rem;
+}
+.sidebar .sidebar-menu {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  margin-top: 3rem;
+}
+.sidebar .sidebar-menu a {
+  color: hsl(240deg, 100%, 5%);
+  font-size: 1.5rem;
+  text-decoration: none;
+  font-weight: 700;
+  padding: 1rem;
+}
+.sidebar .sidebar-menu a:hover {
+  background: hsl(5deg, 85%, 63%);
+  transition: 0.5s;
+}
+.sidebar .closebtn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+
+main {
+  width: clamp(20rem, 90vw, 80rem);
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin: 2rem 0;
+}
+nav .nav-menu {
+  display: flex;
+  gap: 2rem;
+}
+nav a {
+  text-decoration: none;
+  color: hsl(236deg, 13%, 42%);
+  font-weight: 700;
+}
+nav a:hover {
+  color: hsl(5deg, 85%, 63%);
+}
+nav .openbtn {
+  display: none;
+}
+
+.top {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 2rem;
+}
+.top .big-new-card {
+  width: 70%;
+  overflow: hidden;
+}
+.top .big-new-card .big-new-image img {
+  height: 22rem;
+}
+.top .big-new-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 1.2rem 0;
+}
+.top .big-new-header header {
+  width: 50%;
+  font-size: 3.6rem;
+  font-weight: 800;
+  line-height: 3.6rem;
+}
+.top .big-new-header .big-new-title {
+  width: 50%;
+  padding: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  line-height: 1.2rem;
+  font-size: 1.2rem;
+  color: hsl(236deg, 13%, 42%);
+}
+.top .big-new-header .big-new-title button {
+  width: 50%;
+  background-color: hsl(240deg, 100%, 5%);
+  color: hsl(36deg, 100%, 99%);
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  padding: 1rem 1.8rem;
+  border: none;
+}
+.top .big-new-header .big-new-title button:hover {
+  background-color: hsl(5deg, 85%, 63%);
+  color: hsl(36deg, 100%, 99%);
+}
+.top .side-news {
+  background-color: hsl(240deg, 100%, 5%);
+  gap: 1.2rem;
+  padding: 2rem;
+  width: 30%;
+  height: 100%;
+}
+.top .side-news h2 {
+  font-size: 3rem;
+  color: hsl(35deg, 77%, 62%);
+  margin: 1rem 0;
+}
+.top .side-news .side-card {
+  color: hsl(233deg, 8%, 79%);
+  padding: 1.2rem 0;
+}
+.top .side-news .side-card a {
+  text-decoration: none;
+  color: hsl(36deg, 100%, 99%);
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+.top .side-news .side-card a:hover {
+  color: hsl(35deg, 77%, 62%);
+}
+
+.bottom {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.bottom .news-card {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1.2rem;
+}
+.bottom .news-card .card-image {
+  width: 8rem;
+  height: 10rem;
+  overflow: hidden;
+}
+.bottom .news-card .card-title {
+  width: 15rem;
+  height: 10rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.bottom .news-card .card-title h3 {
+  font-size: 2rem;
+  margin: 0;
+  color: hsl(233deg, 8%, 79%);
+}
+.bottom .news-card .card-title a {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: hsl(240deg, 100%, 5%);
+  text-decoration: none;
+}
+.bottom .news-card .card-title a:hover {
+  color: hsl(5deg, 85%, 63%);
+}
+.bottom .news-card .card-title p {
+  color: hsl(236deg, 13%, 42%);
+  font-size: 1.1rem;
+}
+
+@media screen and (max-width: 400px) {
+  nav .nav-menu {
+    display: none;
+  }
+  nav .openbtn {
+    display: flex;
+    border: none;
+    background-color: hsl(36deg, 100%, 99%);
+    padding: 1rem;
+  }
+  .top {
+    flex-direction: column;
+  }
+  .top .big-new-card {
+    width: 100%;
+  }
+  .top .big-new-card .big-new-header {
+    width: 100%;
+    flex-direction: column;
+    text-align: left;
+    padding: 0;
+  }
+  .top .big-new-card .big-new-header header {
+    width: 100%;
+  }
+  .top .big-new-card .big-new-header .big-new-title {
+    width: 100%;
+    padding: 0;
+  }
+  .top .big-new-card .big-new-header .big-new-title button {
+    background-color: hsl(5deg, 85%, 63%);
+  }
+  .top .side-news {
+    width: 90%;
+    padding: 1rem;
+  }
+  .bottom {
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 4rem;
+  }
+  .bottom .news-card {
+    width: 100%;
+  }
+}/*# sourceMappingURL=main.css.map */

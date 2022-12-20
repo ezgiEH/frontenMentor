@@ -1,0 +1,233 @@
+@font-face
+    font-family: 'Inter', sans-serif
+    src: url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap')
+
+// FONT
+$font-stack: 'Inter', sans-serif
+$font-size: 15px
+$normal: 400
+$bold: 700
+$xbold: 800
+
+//COLORS
+$Soft-orange: hsl(35, 77%, 62%)
+$Soft-red: hsl(5, 85%, 63%)
+$Off-white: hsl(36, 100%, 99%)
+$Grayish-blue: hsl(233, 8%, 79%)
+$Dark-grayish-blue: hsl(236, 13%, 42%)
+$Very-dark-blue: hsl(240, 100%, 5%)
+
+body
+    font-family: $font-stack
+    font-size: $font-size
+    font-weight: $normal
+    color: $Very-dark-blue
+    background: $Off-white
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    height: auto
+
+.sidebar
+    height: 100%
+    width: 0
+    position: fixed
+    z-index: 1
+    top: 0
+    right: 0
+    background-color: $Off-white
+    overflow-x: hidden
+    transition: 0.5s
+    padding-top: 4rem
+
+    .sidebar-menu
+        display: flex
+        flex-direction: column
+        padding: 1rem
+        margin-top: 3rem
+
+        a
+            color: $Very-dark-blue
+            font-size: 1.5rem
+            text-decoration: none
+            font-weight: $bold
+            padding: 1rem
+
+        a:hover
+            background: $Soft-red
+            transition: 0.5s
+
+    .closebtn
+        position: absolute
+        top: 1rem
+        right: 1rem
+
+main
+    //width: 80rem
+    width: clamp(20rem, 90vw, 80rem)
+//navbar
+nav
+    display: flex
+    flex-direction: row
+    align-items: center
+    justify-content: space-between
+    margin: 2rem 0
+    .nav-menu
+        display: flex
+        gap: 2rem
+    a
+        text-decoration: none
+        color: $Dark-grayish-blue
+        font-weight: $bold
+    a:hover
+        color: $Soft-red
+    .openbtn
+        display: none      
+
+//top
+.top
+    display: flex
+    flex-direction: row
+    align-items: flex-start
+    justify-content: center
+    gap: 2rem
+
+    .big-new-card
+        width: 70%
+        overflow: hidden
+        .big-new-image
+            img
+                height: 22rem
+    .big-new-header
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+        margin: 1.2rem 0
+
+        header
+            width: 50%
+            font-size: 3.6rem
+            font-weight: $xbold
+            line-height: 3.6rem
+
+        .big-new-title
+            width: 50%
+            padding: 0 1rem
+            display: flex
+            flex-direction: column
+            justify-content: space-between
+            line-height: 1.2rem
+            font-size: 1.2rem
+            color: $Dark-grayish-blue
+            button
+                width: 50%
+                background-color: $Very-dark-blue
+                color: $Off-white
+                text-transform: uppercase
+                letter-spacing: 0.2rem
+                padding: 1rem 1.8rem
+                border: none
+            button:hover
+                background-color: $Soft-red
+                color: $Off-white
+    .side-news
+        background-color: $Very-dark-blue
+        gap: 1.2rem
+        padding: 2rem
+        width: 30%
+        height: 100%
+        h2
+            font-size: 3rem
+            color: $Soft-orange
+            margin: 1rem 0
+
+        .side-card
+            color: $Grayish-blue
+            padding: 1.2rem 0
+            a
+                text-decoration: none
+                color: $Off-white
+                font-size: 1.2rem
+                font-weight: $bold
+            a:hover
+                color: $Soft-orange
+
+//bottom
+.bottom
+    display: flex
+    flex-direction: row
+    align-items: center
+    justify-content: space-between
+
+    .news-card
+        margin-top: 1rem
+        display: flex
+        flex-direction: row
+        align-items: center
+        gap: 1.2rem
+
+        .card-image
+            width: 8rem
+            height: 10rem
+            overflow: hidden
+
+        .card-title
+            width: 15rem
+            height: 10rem
+            display: flex
+            flex-direction: column
+            justify-content: space-between
+            h3
+                font-size: 2rem
+                margin: 0
+                color: $Grayish-blue
+            a
+                font-size: 1.2rem
+                font-weight: $bold
+                color: $Very-dark-blue
+                text-decoration: none
+            a:hover
+                color: $Soft-red
+
+            p
+                color: $Dark-grayish-blue
+                font-size: 1.1rem
+
+//responsive
+@media screen and (max-width: 400px)
+    nav
+        .nav-menu
+            display: none
+        .openbtn
+            display: flex
+            border: none
+            background-color: $Off-white
+            padding: 1rem   
+    .top
+        flex-direction: column
+        .big-new-card
+            width: 100%
+            .big-new-header
+                width: 100%
+                flex-direction: column
+                text-align: left
+                padding: 0
+                header
+                    width: 100%
+                .big-new-title
+                    width: 100%
+                    padding: 0
+                    button
+                        background-color: $Soft-red
+
+        .side-news
+            width: 90%
+            padding: 1rem
+
+    .bottom
+        flex-direction: column
+        width: 100%
+        margin-bottom: 4rem
+        .news-card
+            width: 100%
