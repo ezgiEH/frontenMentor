@@ -35,6 +35,7 @@ main
 
 /*----------------SIDEBAR-------------*/
 .sidebar
+    display: none
     height: 100%
     position: fixed
     z-index: 1
@@ -44,7 +45,7 @@ main
     overflow-x: hidden
     transition: 0.5s
     padding-top: 4rem
-
+    
     .sidenav
         width: 14rem
         display: flex
@@ -52,7 +53,7 @@ main
         align-items: flex-start
         justify-content: space-between
         padding: 1rem
-        margin-top: 1rem
+        transition: 0.5s
         gap: 1rem
         .dropdown-btn
             border: none
@@ -60,7 +61,7 @@ main
             padding: 0
         a
             color: $Almost-Black
-            font-size: 1.2rem
+            font-size: 1rem
             text-decoration: none
             font-weight: $bold
         ul
@@ -75,6 +76,7 @@ main
             a:hover
                 background: $Medium-Gray
                 transition: 0.5s
+            
         .user
             right: 0
             display: flex
@@ -83,6 +85,7 @@ main
             justify-content: center
             gap: 1rem
             .register
+                font-weight: $regular
                 border: 0.1rem solid $Almost-Black
                 padding: 0.6rem 0.8rem
                 border-radius: 1em

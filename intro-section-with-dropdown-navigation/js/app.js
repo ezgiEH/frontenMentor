@@ -1,10 +1,10 @@
 // sidebar
 function openNav() {
-    document.getElementById("sidebar").style.width = "20rem";
+    document.getElementById("sidebar").style.display = "block";
 }
 
 function closeNav() {
-    document.getElementById("sidebar").style.width = "0";
+    document.getElementById("sidebar").style.display = "none";
     document.getElementById("main").style.marginLeft = "0";
 }
 // sidebar
