@@ -1,0 +1,239 @@
+@font-face
+    font-family: 'Epilogue', sans-serif
+    src: url('https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap')
+
+$font-stack: 'Epilogue', sans-serif
+$regular: 500
+$bold: 700
+
+$Almost-White: hsl(0, 0%, 98%)
+$Medium-Gray: hsl(0, 0%, 41%)
+$Almost-Black: hsl(0, 0%, 8%)
+
+$Box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px
+
+html
+    font-size: 18px
+
+body
+    font-family: $font-stack
+    font-weight: $regular
+    background-color: $Almost-White
+    color: $Medium-Gray
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    height: auto
+
+main
+    width: clamp(20rem, 90vw, 70rem)
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+
+/*----------------SIDEBAR-------------*/
+.sidebar
+    height: 100%
+    position: fixed
+    z-index: 1
+    top: 0
+    right: 1rem
+    background-color: $Almost-White
+    overflow-x: hidden
+    transition: 0.5s
+    padding-top: 4rem
+
+    .sidenav
+        width: 14rem
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+        justify-content: space-between
+        padding: 1rem
+        margin-top: 1rem
+        gap: 1rem
+        .dropdown-btn
+            border: none
+            background-color: $Almost-White
+            padding: 0
+        a
+            color: $Almost-Black
+            font-size: 1.2rem
+            text-decoration: none
+            font-weight: $bold
+        ul
+            margin: 0
+            padding: 1rem
+            list-style-type: none
+            li
+                padding: 0.2rem
+                img
+                    margin-right: 1rem
+
+            a:hover
+                background: $Medium-Gray
+                transition: 0.5s
+        .user
+            right: 0
+            display: flex
+            flex-direction: row
+            align-items: center
+            justify-content: center
+            gap: 1rem
+            .register
+                border: 0.1rem solid $Almost-Black
+                padding: 0.6rem 0.8rem
+                border-radius: 1em
+            .register:hover
+                border: 0.1rem solid $Medium-Gray
+    .closebtn
+        position: absolute
+        right: 2rem
+        top: 1rem
+/*----------------SIDEBAR-------------*/
+
+/*----------------NAVBAR-------------*/
+nav
+    width: 100%
+    display: flex
+    flex-direction: row
+    justify-content: flex-start
+    align-items: center
+    padding: 2rem
+    a
+        cursor: pointer
+        text-decoration: none
+        color: $Almost-Black
+        font-weight: $bold
+    a:hover
+        color: $Medium-Gray
+    .menu
+        display: flex
+        flex-direction: row
+        align-items: center
+        justify-content: flex-start
+        margin-left: 2rem
+        gap: 1.5rem
+        width: 100%
+    .user
+        right: 0
+        display: flex
+        flex-direction: row
+        align-items: center
+        justify-content: center
+        gap: 1rem
+        .register
+            border: 0.1rem solid $Almost-Black
+            padding: 0.6rem 0.8rem
+            border-radius: 1em
+        .register:hover
+            border: 0.1rem solid $Medium-Gray
+.dropdown
+    position: relative
+    display: inline-block
+    gap: 1rem
+
+.dropdown-content
+    display: none
+    position: absolute
+    background-color: $Almost-White
+    min-width: 10rem
+    box-shadow: $Box-shadow
+    border-radius: 1rem
+    padding: 0.4rem
+    z-index: 1
+    ul
+        margin: 0
+        padding: 1rem
+        list-style-type: none
+        li
+            padding: 0.2rem
+            a
+                font-size: 1rem
+                font-weight: $regular
+                img
+                    margin-right: 1rem
+
+.dropdown:hover .dropdown-content
+    display: block
+
+.openbtn
+    display: none
+/*----------------NAVBAR-------------*/
+section
+    margin-top: 4rem
+    padding: 2rem
+    width: 60rem
+    height: 30rem
+    display: flex
+    flex-direction: row
+    align-items: center
+    justify-content: center
+    .image
+
+        img
+            width: 25rem
+
+    .content
+        width: 35rem
+        h1
+            color: $Almost-Black
+            font-size: clamp(1rem, 10vw, 5rem)
+            font-weight: $bold
+            margin: 0
+        p
+            font-size: clamp(1rem, 2.5vw, 1.5rem)
+            margin-bottom: 4rem
+        a
+            background: $Almost-Black
+            color: $Almost-White
+            border-radius: 1rem
+            padding: 1rem 2rem
+            box-shadow: $Box-shadow
+            font-weight: $bold
+            cursor: pointer
+        a:hover
+            background: $Almost-White
+            color: $Almost-Black
+            border: 0.1px solid $Almost-Black
+
+    .clients
+        width: 80%
+        display: flex
+        flex-direction: row
+        align-items: center
+        justify-content: space-between
+        margin-top: 8rem
+
+@media screen and (max-width: 400px)
+
+    nav
+        justify-content: space-between
+        .menu
+            display: none
+        .user
+            display: none
+        .openbtn
+            display: flex
+            border: none
+            background-color: $Almost-White
+            padding: 1rem
+    section
+        flex-direction: column-reverse
+        width: 20rem
+
+        .content
+            width: 18rem
+            text-align: center
+            p
+                margin-bottom: 3rem
+            .clients
+                margin: 4rem 0
+        .image
+            padding: 1rem
+            height: 20rem
+            img
+                object-fit: fill
+                width: 20rem
