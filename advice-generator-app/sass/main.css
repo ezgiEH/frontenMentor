@@ -1,0 +1,62 @@
+@font-face {
+  font-family: "Manrope", sans-serif;
+  src: url("https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap");
+}
+html {
+  font-size: 28px;
+}
+
+body {
+  background-color: hsl(218deg, 23%, 16%);
+  color: hsl(193deg, 38%, 86%);
+  font-family: "Manrope", sans-serif;
+  font-weight: 800;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+main .card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: hsl(217deg, 19%, 24%);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+main .card span {
+  color: hsl(150deg, 100%, 66%);
+  font-size: clamp(0.4rem, 2vw, 0.5rem);
+  font-weight: 600;
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+}
+main .card .card-title {
+  font-size: clamp(0.8rem, 2vw, 1rem);
+  text-align: center;
+  width: 10rem;
+}
+main .card .card-button {
+  margin-top: 1rem;
+  margin-bottom: -2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main .card .card-button button {
+  background-color: hsl(150deg, 100%, 66%);
+  border: 0.1rem solid hsl(218deg, 23%, 16%);
+  width: 2rem;
+  height: 2rem;
+  padding: 0.4rem;
+  border-radius: 1rem;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+  cursor: pointer;
+}
+main .card .card-button button:hover {
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}/*# sourceMappingURL=main.css.map */
