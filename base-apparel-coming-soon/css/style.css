@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --Desaturated-Red: hsl(0, 36%, 70%);
+    --Soft-Red: hsl(0, 93%, 68%);
+    --Valid: hsl(157, 93%, 68%);
+    --Dark-Grayish-Red: hsl(0, 6%, 24%);
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-size: 16px;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+    background-image: url(../images/bg-pattern-desktop.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+}
+
+.left-section {
+    height: auto;
+    width: 60vw;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 5rem;
+    gap: 8rem;
+}
+
+.content-section {
+    padding-right: 6rem;
+}
+
+.content-section header {
+    color: var(--Dark-Grayish-Red);
+    font-size: clamp(1rem, 10vw, 5rem);
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1rem;
+    margin-bottom: 1.2rem;
+}
+
+.content-section span {
+    color: var(--Desaturated-Red);
+    font-weight: 300;
+}
+
+.content-section p {
+    color: var(--Desaturated-Red);
+    font-size: clamp(1rem, 2.5vw, 1.3rem);
+    font-weight: 400;
+    line-height: 2rem;
+}
+
+form {
+    width: 100%;
+    margin-top: 2rem;
+}
+
+input {
+    width: 100%;
+    height: 4rem;
+    border: 0.1rem solid var(--Desaturated-Red);
+    opacity: 0.5;
+    border-radius: 2rem;
+    padding: 0 2rem;
+    font-size: 1rem;
+}
+
+input.error {
+    border: 0.1rem solid var(--Soft-Red);
+}
+
+input.valid {
+    border: 0.1rem solid var(--Valid);
+}
+
+button {
+    position: absolute;
+    width: 8rem;
+    height: 4rem;
+    background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+    border: none;
+    border-radius: 2rem;
+    margin-left: -8rem;
+    box-shadow: var(--Desaturated-Red) 0px 5px 15px;
+    z-index: 1;
+}
+
+button:hover {
+    background: hsl(0, 74%, 74%);
+}
+
+button.error {
+    background: var(--Soft-Red);
+}
+
+button.valid {
+    background: var(--Valid);
+}
+
+.form-section p {
+    font-size: 1rem;
+    text-align: center;
+}
+
+.form-section p.valid {
+    font-size: 1rem;
+    text-align: center;
+    color: var(--Valid);
+}
+
+.form-section p.error {
+    font-size: 1rem;
+    text-align: center;
+    color: var(--Soft-Red);
+}
+
+.hero-section {
+    width: 45vw;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-section img {
+    object-fit: cover;
+}
+
+@media all and (max-width: 400px) {
+    body {
+        height: auto;
+    }
+
+    .container {
+        width: 23rem;
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+        height: auto;
+    }
+
+    .left-section {
+        text-align: center;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .nav-section img {
+        display: none;
+        margin: 0;
+    }
+
+    .content-section {
+        padding-right: 0;
+    }
+
+    .hero-section {
+        width: 23rem;
+        height: auto;
+    }
+
+    button {
+        position: absolute;
+        width: 5rem;
+        height: 3rem;
+        margin-left: -3rem;
+    }
+
+    input {
+        height: 3rem;
+        font-size: 0.8rem;
+        padding: 0.8rem;
+    }
+}
