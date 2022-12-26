@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Expenses chart component</title>
+
+</head>
+<body>
+  <main>
+    <section class="top">
+      <div class="my-balance">
+        <p>My balance</p>
+        <span>$921.48</span>
+      </div>
+      <img src="./images/logo.svg" alt="logo">
+    </section>
+
+    <section class="card">
+      <div class="header">
+        <header>Spending - Last 7 days</header>
+      </div>
+      <div class="graph">
+        <div class="item ">
+          <p>mon</p>
+          <div class="mon line"></div>
+          <div class="modal"><p class="mon-modal"></p></div>
+        </div>
+        <div class="item ">
+          <p>tue</p>
+          <div class="tue line"></div>
+          <div class="modal "><p class="tue-modal"></p></div>
+        </div>
+        <div class="item ">
+          <p>wed</p>
+          <div class="wed line"></div>
+          <div class="modal "><p class="wed-modal"></p></div>
+        </div>
+        <div class="item ">
+          <p>thu</p>
+          <div class="thu line"></div>
+          <div class="modal "><p class="thu-modal"></p></div>
+        </div>
+        <div class="item ">
+          <p>fri</p>
+          <div class="fri line"></div>
+          <div class="modal "><p class="fri-modal"></p></div>
+        </div>
+        <div class="item ">
+          <p>sat</p>
+          <div class="sat line"></div>
+          <div class="modal "><p class="sat-modal"></p></div>
+        </div>
+        <div class="item ">
+          <p>sun</p>
+          <div class="sun line"></div>
+          <div class="modal"><p class="sun-modal"></p></div>
+        </div>
+
+      </div>
+      <hr></hr>
+      <div class="total">
+        <div class="this-month">
+          <p>Total this month</p>
+          <span>$478.33</span>
+        </div>
+        <div class="last-month">
+          <span>+2.4%</span>
+          <p>from last month</p>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+</body>
+<script src="./js/app.js"></script>
+</html>

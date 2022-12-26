@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+:root {
+    --Soft-red: hsl(10, 79%, 65%);
+    --Cyan: hsl(186, 34%, 60%);
+    --Dark-brown: hsl(25, 47%, 15%);
+    --Medium-brown: hsl(28, 10%, 53%);
+    --Cream: hsl(27, 66%, 92%);
+    --Very-pale-orange: hsl(33, 100%, 98%);
+    --White: rgb(255, 255, 255);
+    --regular: 400;
+    --bold: 700;
+}
+body{
+    font-family: 'DM Sans', sans-serif;
+    font-size: 18px;
+    font-weight: var(--regular);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: var(--Cream);
+}
+
+section{
+    min-width: 20rem;
+}
+
+.top{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--Soft-red);
+    padding: 1rem;
+    border-radius: 1rem;
+    color: var(--Very-pale-orange);
+    margin: 1rem 0;
+}
+.top p{
+    font-size: 0.8rem;
+    opacity: 0.8;
+}
+.top span{
+    font-size: 1.5rem;
+    font-weight: var(--bold);
+}
+.card{
+    background-color: var(--Very-pale-orange);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.header header{
+    font-size: 1.5rem;
+    font-weight: var(--bold);
+    color: var(--Dark-brown);
+}
+/* GRAPH */
+.graph{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 1rem 0;
+}
+
+.item{
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    height: 12rem;
+    position: relative;
+   cursor: pointer;
+}
+
+.item p{
+    color: var(--Medium-brown);
+}
+
+.modal {
+    display: none;
+    position: absolute;
+    /* margin-bottom: 1rem; */
+    top:2rem
+}
+
+.modal p{
+    background-color: var(--Dark-brown);
+    color: var(--White);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 1rem;
+    padding: 0.2rem ;
+    border-radius: 0.2rem;
+}
+
+.item:hover .modal{
+    display: block;
+}
+
+.line{
+    background-color: var(--Soft-red);
+    height: 10rem;
+    width: 2.5rem;
+    border-radius: 0.2rem;
+    opacity: 0.8;
+}
+.line:hover {
+    opacity: 1;
+}
+
+/* TOTAL */
+.total{
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin: 1rem 0;
+}
+
+.total p{
+    color: var(--Medium-brown);
+    font-size: 0.8rem;
+}
+
+.this-month span{
+    font-size: 2rem;
+    font-weight: var(--bold);
+}
+
+.last-month span{
+    font-weight: var(--bold);
+}
