@@ -1,0 +1,248 @@
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;600&display=swap');
+
+
+:root {
+    --Strong-Cyan: hsl(171, 66%, 44%);
+    --Light-Blue: hsl(233, 100%, 69%);
+    --Dark-Grayish-Blue: hsl(210, 10%, 33%);
+    --Grayish-Blue: hsl(201, 11%, 66%);
+    --Gray: hsl(200, 19%, 91%);
+    --White: hsl(0, 0%, 100%);
+    --Box-shadow:rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    --Font-family: 'Bai JamJuree', sans-serif;
+    --Font-size: 18px;
+    --Regular: 400;
+    --Bold: 600;
+}
+h1{
+    font-size: clamp(2rem, 2vw, 4rem);;
+    font-weight: var(--Bold);
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    font-family: var(--Font-family);
+    font-size: var(--Font-size);
+    color: var(--Dark-Grayish-Blue);
+    margin: 0;
+}
+
+.hero{
+    background-image: url("../images/bg-header-desktop.png");
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 4rem;   
+}
+
+.logo{
+    margin-top: 4rem;
+}
+
+.header{
+    width: clamp(24rem, 50vw, 40rem);
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.header p{
+    opacity: 0.6;
+}
+
+.buttons{
+    display: flex;
+    flex-direction: row;
+}
+
+.btn{
+    padding: 1rem 3rem;
+    margin: 1rem;
+    color: var(--White);
+    border-radius: 2rem;
+    text-decoration: none;
+    box-shadow: var(--Box-shadow);
+}
+.btn:hover{
+    opacity: 0.8;
+}
+.btn-cyan{
+    background-color: var(--Strong-Cyan);
+}
+.btn-blue{
+    background-color: var(--Light-Blue);
+}
+/*keep*/
+.keep{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.images-left-content{
+    
+    display: flex;
+    flex-direction: row;
+}
+.images-left-content img{
+    max-height: clamp(20rem, 50vw, 40rem);
+    max-width:clamp(30rem, 50vw, 40rem); 
+}
+.right-content{
+    padding: 6rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: start;
+    max-width:clamp(20rem, 50vw, 40rem); 
+}
+.right-content p{
+    opacity: 0.6;
+}
+/*keep*/
+/*access*/
+.access{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.access img{
+    max-width: clamp(22rem, 50vw, 40rem);
+}
+/*access*/
+
+/*supercharge*/
+.supercharge{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.center-content{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    
+}
+figure{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 12rem;
+}
+figcaption{
+    text-align: center;
+    max-width: 20rem;
+}
+figcaption p{
+    opacity: 0.6; 
+}
+
+/*supercharge*/
+
+/*clients*/
+.clients{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    margin: 5rem 0;
+}
+.clients img{
+    margin: 2rem;
+}
+/*clients*/
+
+/*clipboard*/
+.clipboard{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+/*clipboard*/
+
+/*footer*/
+.footer{
+    background-color: var(--Gray);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    margin-top: 6rem;
+    padding: 2rem;
+}
+
+.footer-logo img{
+    width: 4rem;
+}
+
+.footer-menu{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    margin-right: 10rem;
+    margin-left: 2rem;
+}
+.menu-item{
+    display: flex;
+    flex-direction: column;
+}
+.footer a{
+    text-decoration: none;
+    color: var(--Dark-Grayish-Blue);
+    margin: 1rem;
+}
+.footer a:hover{
+    color: var(--Strong-Cyan);
+}
+
+/*footer*/
+
+
+@media only screen and (max-width: 500px) {
+    .hero{
+        background-image: url("../images/bg-header-mobile.png");
+        background-position: top;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .buttons{
+        flex-direction: column;
+    }
+    .images-left-content{
+        flex-direction: column;
+    }
+    .right-content{
+        text-align: center;
+    }
+    .center-content{
+        flex-direction: column;
+    }
+    .clients{
+        flex-direction: column;
+    }
+    .footer{
+        flex-direction: column;
+        padding: 2rem 0;
+        
+    }
+    .footer-menu{
+        flex-direction: column;
+        text-align: center;
+        margin: 0;
+        margin-bottom: 1rem;
+    }
+  }
