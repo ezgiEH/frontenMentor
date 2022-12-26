@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Tip calculator app</title>
+
+</head>
+
+<body>
+  <main>
+    <section class="logo">
+      <img src="./images/logo.svg" alt="splitter">
+    </section>
+    <section class="tip-app">
+      <div class="calculate-form">
+        <form>
+          <div class="form-field">
+            <label for="bill">Bill</label><br>
+            <input type="tel" id="bill" name="bill"><i><img src="images/icon-dollar.svg" alt="dolar"></i><br>
+            
+          </div>
+
+          <div class="select-tip-area">
+            <label for="tip">Select Tip %</label><br>
+            <div class="select-tip">
+              <div class="tip-btn">5%</div>
+              <div class="tip-btn">10%</div>
+              <div class="tip-btn ">15%</div>
+              <div class="tip-btn">25%</div>
+              <div class="tip-btn">50%</div>
+              <input class="custom-btn" id="custom" type="tel" class="custom-btn" placeholder="Custom" />
+            </div>
+          </div>
+
+            <div class="form-field">
+              <label for="people">Number of People</label>
+              <input type="tel" id="people" name="people"><i><img src="./images/icon-person.svg" alt="person"></i><br>
+              <span id="error" class="error hide">Can't be zero</span>
+            </div>
+
+        </form>
+      </div>
+
+      <div class="result">
+        <div class="person-result">
+          <header>Tip Amount<br><p>/ person</p></header>
+          <span id="amount"></span>
+        </div>
+        <div class="person-result">
+          <header>Total<br><p>/ person</p></header>
+          <span id="total"></span>
+        </div>
+        <button class="reset-btn" type="submit">Reset</button>
+      </div>
+      
+    </section>
+  </main>
+
+ 
+
+</body>
+<script src="./js/app.js"></script>
+
+</html>

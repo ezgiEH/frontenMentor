@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap');
+
+:root {
+    --Strong-cyan: hsl(172, 67%, 45%);
+    --Very-dark-cyan: hsl(183, 100%, 15%);
+    --Dark-grayish-cyan: hsl(186, 14%, 43%);
+    --Grayish-cyan: hsl(184, 14%, 56%);
+    --Light-grayish-cyan: hsl(185, 41%, 84%);
+    --Very-light-grayish-cyan: hsl(189, 41%, 97%);
+    --White: hsl(0, 0%, 100%);
+
+    --Font-family: 'Space Mono', sans-serif;
+    --Font-size: 24px;
+    --Font-Weight: 700;
+}
+
+body{
+    font-family: var(--Font-family);
+    font-size: var(--Font-size);
+    font-weight: var(--Font-Weight);
+    background-color: var(--Light-grayish-cyan);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+.logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem;
+}
+.tip-app{
+    background-color: var(--White);
+    width: auto;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.calculate-form{
+    padding: 3rem;
+    color: var(--Grayish-cyan);
+    font-size: 1rem;
+    max-width: clamp(18rem , 50vw, 20rem);
+}
+
+.form-field{
+    position: relative;  
+    
+}
+
+.form-field input{
+    background: var(--Very-light-grayish-cyan);
+    text-align: end;
+    padding: 0.5rem;
+    margin:0.5rem 0;
+    border: none;
+    border-radius: .5rem;
+    width: 100%;
+    height: 1.5rem;
+    color: var(--Very-dark-cyan);
+    font-family: var(--Font-family);
+    font-size: 1.2rem;
+    outline: none;
+}
+
+.form-field i{
+    position: absolute;
+    left: 1rem;
+    top: 2.5rem
+}
+
+.form-field span{
+    position: absolute;
+    color: var(--Strong-cyan);
+    font-size: 0.8rem;
+    top: 4.5rem;
+    right:0;
+}
+
+.hide{
+    display: none;
+}
+.select-tip-area{
+    margin: 1rem 0;
+}
+.select-tip{
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    gap: 0.5rem;
+}
+
+.tip-btn{
+    background: var(--Very-dark-cyan);
+    color: var(--White);
+    font-size: 1.2rem;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    text-align: center;
+    cursor: pointer;
+}
+.tip-btn:hover{
+    background: var(--Strong-cyan);
+    color: var(--Very-dark-cyan);
+}
+.tip-btn.selected{
+    background: var(--Strong-cyan);
+    color: var(--Very-dark-cyan);
+}
+
+.custom-btn{
+    background: var(--Very-light-grayish-cyan);
+    text-align: end;
+    padding: 0.5rem;
+    border: none;
+    border-radius: .5rem;
+    font-family: var(--Font-family);
+    font-size: 1.2rem;
+    outline: none;
+}
+
+
+.result{
+    background: var(--Very-dark-cyan);
+    width: 16rem;
+    height: 16rem;
+    margin: 1rem;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 1rem;
+}
+
+.person-result{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.person-result header{
+    color: var(--White);
+    font-size: 1rem;
+}
+.person-result p{
+    font-size: 0.8rem;
+    color: var(--Dark-grayish-cyan);
+    margin: 0;
+}
+
+.person-result span{
+    color: var(--Strong-cyan);
+    font-size: 2rem;
+}
+
+.reset-btn{
+    background: var(--Strong-cyan);
+    padding: 0.8rem;
+    border: none;
+    text-transform: uppercase;
+    font-family: var(--Font-family);
+    font-size: 1rem;
+    color: var(--Very-dark-cyan);
+    font-weight: bolder;
+    cursor: pointer;
+    transition: .3s ease;
+    border-radius: .2rem;
+}
+
+
+@media only screen and (max-width: 501px){
+    body{
+        height: auto;
+    }
+    .tip-app{
+        flex-direction: column;
+    }
+    .calculate-form{
+        padding: 1rem;
+    }
+}
