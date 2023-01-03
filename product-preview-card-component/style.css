@@ -1,185 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap');
 
-body{
-    background-color: hsl(30, 38%, 92%);
-    height: 100vh;
+
+:root {
+    /*Fonts*/
+    --Montserrat: 'Montserrat', sans-serif;
+    --Fraunces: 'Fraunces', sans-serif;
+    --Regular: 500;
+    --Bold: 700;
+
+    /*Colors*/
+    --Dark-cyan: hsl(158, 36%, 37%);
+    --Cream: hsl(30, 38%, 92%);
+    --Very-dark-blue: hsl(212, 21%, 14%);
+    --Dark-grayish-blue: hsl(228, 12%, 48%);
+    --White: hsl(0, 0%, 100%);
+}
+p {
+    display: block;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+body {
+    background-color: var(--Cream);
+    font-family: var(--Montserrat);
     font-size: 14px;
+    font-weight: var(--Regular);
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    flex-direction: row;
+    height: 100vh;
 }
 
 .container{
-    background-color: hsl(30, 38%, 92%);
+    width: 80rem;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    flex-direction: row;
-    width: 80%;
-    height: 80%;
-    border-radius: 10px;
-    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
-    padding: 200px;
 }
 
 .card{
+    width: clamp(22rem, 50vw, 60rem);
+    height: clamp(35rem, 50vw, 30rem);
+    background: var(--White);
     display: flex;
     flex-direction: row;
+    align-items: center;
     justify-content: center;
-    align-items: center; 
-    width: 100%;
-    border-radius: 10px;
-    background-color: hsl(0, 0%, 100%);
+    border-radius: 1rem;
+    overflow: hidden;
 }
 
 .card-image{
-    width: 50%;
-    height: 50%;
-    border-radius: 10px;
+    width: clamp(22rem, 50vw, 35rem);
+    overflow: hidden;
 }
 
-.card-image img{
-    width: 100%;
-    height: 100%;
-    border-radius: 10px 0 0 10px;
+picture{
+    height: clamp(20rem, 100vw, 50rem);
+    object-fit: cover;
+}
+
+picture img{
+    width: 24rem;
 }
 
 .card-content{
+    width: clamp(20rem, 50vw, 30rem);
+    height: 30rem;
+    padding: 1.5rem;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;;
-    width: 50%;
-    height: auto;
-    padding: 24px 48px;
+    align-items: center;
+    justify-content: space-between;
 }
 
-
-.card-header h1{
-    font-family: 'Fraunces', serif;
-    font-size: 4.5rem;
-    font-weight: 700;
-    line-height: 1;
-    color: hsl(212, 21%, 14%);
-    margin: 0px;
+.card-title span{
+    color: var(--Dark-grayish-blue);
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
+    text-transform: uppercase;
+    letter-spacing: .2rem;
 }
 
-.card-header p{
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1.5rem;
-    font-weight: 500;
-    letter-spacing: 2px;
-    color: hsl(228, 12%, 48%);
-    
+.card-title header{
+    color: var(--Very-dark-blue);
+    font-family: var(--Fraunces);
+    font-size: clamp(2rem, 3vw, 4rem);
+    font-weight: var(--Bold);
 }
 
-.card-title{
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1.5rem;
-    font-weight: 500;
-    line-height: 1.2;
-    color: hsl(228, 12%, 48%);
+.card-title p{
+    color: var(--Dark-grayish-blue);
+    font-size: 1rem;
+    margin: 1rem 0;
 }
 
-.card-price {
-    font-family: 'Fraunces', serif;
-    font-size: 3rem;
-    font-weight: 700;
-    color: hsl(158, 36%, 37%);
-    margin: 24px 0px;
+.card-price{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.card-price p{
+    color: var(--Dark-cyan);
+    font-family: var(--Fraunces);
+    font-weight: var(--Bold);
+    font-size: clamp(1.5rem, 5vw, 3rem);
+    margin: 1rem 0;
 }
 
 .card-price span{
-    font-family: 'Fraunces', serif;
-    font-size: 1.5rem;
-    font-weight: 500;
-    color: hsl(228, 12%, 48%);
-    text-decoration: line-through;
-    text-align: center;
+    color: var(--Dark-grayish-blue);
+    text-decoration:line-through;
+    margin-left: 1rem;
 }
 
-.card-btn {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 2rem;
-    width: 100%;
-    background-color:hsl(158, 36%, 37%);
-    color:hsl(0, 0%, 100%);
-    border-radius: 6px;
-    border : none;
-    padding: 16px 32px;
+.card-button{
+    width: 90%;
+    background: var(--Dark-cyan);
+    padding: 1rem 1.2rem;
+    border-radius: 1rem;
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
 }
 
-.card-btn img{
-    width: 30px;
-    height: 30px;
-    margin-right: 10px;
+.card-button a{
+    color: var(--White);
+    text-decoration: none;
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
 }
 
-.card-btn:hover{
-    background-color: hsl(158, 36%, 27%);
+.card-button img{
+    margin-right: 1rem;
+    width: 1.3rem;
+    height: 1.3rem;
 }
 
 
-@media  screen and (max-width: 768px){
-    .container{
-        flex-direction: column;
-        padding: 0px;
-        width: 100%;
-    }
+@media only screen and (max-width: 500px) {
     .card{
-        padding: 0px;
         flex-direction: column;
-        border-radius: 10px;
-    }
-    .card-image{
-        width: 50%;
-        height: 50%;
-    }
-    .card-image img{
-       src: url(./images/image-product-mobile.jpg);
-        border-radius: 10px 10px 0 0;
-    }
-    .card-content{
-        align-items: center;
-        padding: 10px;
-        width: 100%;
-        border-radius: 0 0 10px 10px;
-    }
-    .card-header h1{
-        font-size: 2rem;
-        margin: 10px;
-    }
-    .card-header p{
-        font-size: 1rem;
-        margin-bottom: 10px;
-        margin: 10px;
-    }
-    .card-title{
-        font-size: 1rem;
-        margin-bottom: 10px;
-        margin: 10px;
-    }
-    .card-price{
-        margin: 10px;
-        font-size: 2rem;
-        margin: 10px;
-    }
-    .card-price span{
-        font-size: 1rem;
-    }
-    .card-btn{
-        font-size: 1rem;
-        padding: 8px 16px;
-        width: 80%;
-        margin-bottom: 10px;
-    }
-    .card-btn img{
-        margin: 10px;
-        width: 15px;
-        height: 15px;
-        margin-right: 5px;
     }
 }
-    
