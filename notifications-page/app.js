@@ -1,0 +1,9 @@
+$(document).ready(function(){
+    $(".notify-block").click(function(){
+      $(this).toggleClass("unread");
+    });
+    $(".btn-mark").click(function(){
+        $(".badge").text("0");
+        $(".unread").removeClass("unread");
+      });
+  });

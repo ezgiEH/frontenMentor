@@ -1,0 +1,129 @@
+$Font-Jakarta: 'Plus Jakarta Sans', sans-serif;
+
+$White: hsl(0, 0%, 100%);
+$Red: hsl(1, 90%, 64%);
+$Blue: hsl(219, 85%, 26%);
+$Very-light-grayish-blue: hsl(210, 60%, 98%);
+$Light-grayish-blue-1: hsl(211, 68%, 94%);
+$Light-grayish-blue-2: hsl(205, 33%, 90%);
+$Grayish-blue: hsl(219, 14%, 63%);
+$Dark-grayish-blue: hsl(219, 12%, 42%);
+$Very-dark-blue: hsl(224, 21%, 14%);
+
+body{
+    background-color:  $Very-light-grayish-blue;
+    font-family: $Font-Jakarta;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    
+    .container{
+        background-color: $White;
+        width: 80vw;
+        padding: 2rem;
+        border-radius: 1rem;
+        .header{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+                h1{
+                    font-size: clamp(1.2rem, 2.5vw, 2rem);
+                    padding: 0;
+                    margin: 0;
+                    span{
+                        font-size: clamp(1rem, 2.5vw, 1.5rem);
+                        margin:0 .1rem;
+                        background-color: $Blue;
+                        padding:0rem .8rem;
+                        color: $White;
+                        border-radius: .5rem;
+                    }
+                }
+                p{
+                    font-size: clamp(.8rem, 2.5vw, 1.2rem);
+                    color: $Dark-grayish-blue;
+                    cursor: pointer;
+                    &:hover{
+                       color: $Blue;
+                    }
+                }
+            }
+        }
+
+        .notify-block{
+            &.unread{
+                background-color: $Light-grayish-blue-1;
+            }
+            
+            margin: .5rem 0;
+            padding: .4rem;
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-start;
+            border-radius: .4rem;
+            cursor: pointer;
+            .avatar{
+                margin: 0 .5rem;
+                width: clamp(3rem, 5vw, 4.5rem);
+                height: clamp(3rem, 5vw, 4rem);
+                
+                img{
+                    width: clamp(3rem, 5vw, 4.5rem);
+                    height: clamp(3rem, 5vw, 4rem);
+                    object-fit: contain;
+                }
+            }
+            .content{
+                width: 80vw;
+                color: $Dark-grayish-blue;
+                p{
+                    margin: .1rem;
+                }
+                .text{
+                    p{
+                        font-size: clamp(1rem, 2.5vw, 1.2rem);
+                        gap: .4rem;
+                    }
+                    
+                    strong{
+                        color: $Very-dark-blue;
+                        cursor: pointer;
+                        &:hover{
+                            color: $Blue;
+                        }
+                    }
+                    .dot{
+                        display: none;
+                        margin-left: .4rem;
+                        background-color: $Red;
+                        padding: .4rem;
+                        border-radius: 100%;
+                    }
+                }
+                .time{
+                    p{
+                        font-size: clamp(.8rem, 2.5vw, 1rem);
+                        margin-top: .4rem;
+                    }
+                }
+                .messages{
+                    
+                    p{
+                        margin: .8rem 0;
+                        padding: .8rem;
+                        border: 1px solid $Light-grayish-blue-1;
+                        border-radius: .2rem;
+                    }
+                    img{
+                        padding: .8rem;
+                        width: clamp(3rem, 5vw, 4rem);
+                        height: clamp(3rem, 5vw, 4rem);
+                    }
+                }
+                
+            }
+        }
+        
+}
