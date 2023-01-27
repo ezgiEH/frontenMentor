@@ -1,0 +1,323 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+  font-size: 16px;
+  font-family: "Barlow", sans-serif;
+}
+body main {
+  width: 100%;
+}
+body main .hero {
+  background-image: url(../images/desktop/image-header.jpg);
+  background-position: top center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  height: 80vh;
+}
+@media screen and (max-width: 500px) {
+  body main .hero {
+    height: 60vh;
+  }
+}
+body main .hero .navbar {
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+body main .hero .navbar .hamburger-menu {
+  cursor: pointer;
+  display: none;
+}
+@media screen and (max-width: 500px) {
+  body main .hero .navbar .hamburger-menu {
+    display: flex;
+  }
+}
+body main .hero .navbar #mobile-menu {
+  position: absolute;
+  top: 6rem;
+  width: 75vw;
+  height: 30vh;
+  background-color: hsl(0deg, 0%, 100%);
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+body main .hero .navbar #mobile-menu a {
+  margin: 0.6rem 0;
+  color: hsl(210deg, 4%, 67%);
+}
+body main .hero .navbar .hide {
+  display: none;
+}
+@media screen and (max-width: 500px) {
+  body main .hero .navbar .menu {
+    display: none;
+  }
+}
+body main .hero .navbar a {
+  text-decoration: none;
+  margin: 0 1rem;
+  color: hsl(0deg, 0%, 100%);
+}
+body main .hero .navbar button {
+  font-size: 1.1rem;
+  padding: 0.6rem 1.8rem;
+  background-color: hsl(0deg, 0%, 100%);
+  color: hsl(212deg, 27%, 19%);
+  font-family: "Fraunces", serif;
+  border: none;
+  border-radius: 2rem;
+  cursor: pointer;
+}
+body main .hero .navbar button.btn-mobile {
+  background-color: hsl(51deg, 100%, 49%);
+}
+body main .hero .navbar button:hover {
+  background-color: hsl(51deg, 100%, 49%);
+  color: hsl(212deg, 27%, 19%);
+}
+body main .hero .hero-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  height: 45vh;
+}
+body main .hero .hero-header header {
+  font-family: "Fraunces", serif;
+  text-transform: uppercase;
+  font-size: clamp(2rem, 5vw, 3rem);
+  letter-spacing: 0.4rem;
+  text-align: center;
+  color: hsl(0deg, 0%, 100%);
+}
+body main .about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+body main .about .about-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+@media screen and (max-width: 500px) {
+  body main .about .about-row {
+    flex-direction: column-reverse;
+  }
+}
+@media screen and (max-width: 500px) {
+  body main .about .about-row.right {
+    flex-direction: column;
+  }
+}
+body main .about .about-row .about-content {
+  flex: 1;
+}
+body main .about .about-row .about-content header {
+  font-family: "Fraunces", serif;
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 900;
+  padding: 0 6rem;
+}
+@media screen and (max-width: 500px) {
+  body main .about .about-row .about-content header {
+    text-align: center;
+    padding: 1rem;
+  }
+}
+body main .about .about-row .about-content p {
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
+  padding: 1rem 6rem;
+  color: hsl(213deg, 9%, 39%);
+  line-height: clamp(1rem, 2.5vw, 2rem);
+}
+@media screen and (max-width: 500px) {
+  body main .about .about-row .about-content p {
+    text-align: center;
+    padding: 1rem;
+  }
+}
+body main .about .about-row .about-content a {
+  padding: 6rem;
+}
+body main .about .about-row .about-content a .btn {
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
+  font-family: "Fraunces", serif;
+  text-transform: uppercase;
+  background-color: transparent;
+  border: none;
+}
+@media screen and (max-width: 500px) {
+  body main .about .about-row .about-content a .btn {
+    margin-left: 1rem;
+    margin-bottom: 2rem;
+  }
+}
+body main .about .about-row .about-content a .btn.btn-yellow {
+  border-bottom: 0.4rem solid hsl(51deg, 100%, 49%);
+}
+body main .about .about-row .about-content a .btn.btn-yellow:hover {
+  background-color: hsl(51deg, 100%, 49%);
+  transition: 0.3s;
+}
+body main .about .about-row .about-content a .btn.btn-red {
+  border-bottom: 0.4rem solid hsl(7deg, 99%, 70%);
+}
+body main .about .about-row .about-content a .btn.btn-red:hover {
+  background-color: hsl(7deg, 99%, 70%);
+  transition: 0.3s;
+}
+body main .about .about-row .about-image {
+  flex: 1;
+  overflow: hidden;
+  height: auto;
+  position: relative;
+}
+body main .about .about-row .about-image img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+body main .about .about-row .about-image .image-content {
+  position: absolute;
+  bottom: 4rem;
+  text-align: center;
+  opacity: 0.6;
+}
+@media screen and (max-width: 500px) {
+  body main .about .about-row .about-image .image-content {
+    bottom: 0rem;
+  }
+}
+body main .about .about-row .about-image .image-content header {
+  font-family: "Fraunces", serif;
+  font-size: clamp(1rem, 5vw, 1.5rem);
+  font-weight: 900;
+}
+body main .about .about-row .about-image .image-content p {
+  font-size: clamp(0.9rem, 2.5vw, 1.5rem);
+  font-weight: 600;
+  padding: 0 4rem;
+}
+@media screen and (max-width: 500px) {
+  body main .about .about-row .about-image .image-content p {
+    padding: 0 1rem;
+  }
+}
+body main .testimionals {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 6rem;
+  text-align: center;
+}
+@media screen and (max-width: 500px) {
+  body main .testimionals {
+    padding: 0;
+  }
+}
+body main .testimionals header {
+  margin-top: 4rem;
+  font-family: "Fraunces", serif;
+  text-transform: uppercase;
+  font-size: clamp(1rem, 5vw, 1.5rem);
+  color: hsl(213deg, 9%, 39%);
+}
+body main .testimionals .test-items {
+  margin: 4rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+@media screen and (max-width: 500px) {
+  body main .testimionals .test-items {
+    flex-direction: column;
+    margin: 1rem 0;
+  }
+}
+body main .testimionals .test-items figure {
+  padding: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media screen and (max-width: 500px) {
+  body main .testimionals .test-items figure {
+    padding: 1rem 0;
+  }
+}
+body main .testimionals .test-items figure img {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+}
+body main .testimionals .test-items figure figcaption {
+  color: hsl(213deg, 9%, 39%);
+}
+body main .testimionals .test-items figure figcaption header {
+  margin-top: 4rem;
+  font-size: 1rem;
+  color: hsl(212deg, 27%, 19%);
+  font-weight: 900;
+}
+body main .testimionals .test-items figure figcaption span {
+  color: hsl(210deg, 4%, 67%);
+  font-size: 0.8rem;
+}
+body main .gallery {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media screen and (max-width: 500px) {
+  body main .gallery {
+    overflow: hidden;
+  }
+}
+body main .gallery .gallery-item {
+  flex: 1;
+  height: 50vh;
+  overflow: hidden;
+}
+@media screen and (max-width: 500px) {
+  body main .gallery .gallery-item {
+    min-width: 50vw;
+    height: 30vh;
+  }
+}
+body main .gallery .gallery-item img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+body main .footer {
+  background-color: hsl(168deg, 44%, 71%);
+  padding: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+body main .footer a {
+  text-decoration: none;
+  color: hsl(167deg, 40%, 24%);
+  margin: 0 0.5rem;
+  cursor: pointer;
+}
+body main .footer a:hover {
+  color: hsl(0deg, 0%, 100%);
+}
+body main .footer .footer-menu {
+  margin-bottom: 1rem;
+}/*# sourceMappingURL=style.css.map */

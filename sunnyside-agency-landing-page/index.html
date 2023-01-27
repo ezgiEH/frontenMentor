@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:opsz,wght@9..144,700;9..144,900&display=swap" rel="stylesheet">
+  <title>Frontend Mentor | Sunnyside agency landing page</title>
+</head>
+<body>
+  <main>
+    <!-- HERO -->
+    <div class="hero">
+      <div class="navbar">
+        <img src="./images/logo.svg" alt="sunnyside">
+        <div id="mobile-menu">
+          <a href="/">About</a>
+          <a href="/">Services</a>
+          <a href="/">Projects</a>
+          <a href="/"><button class="btn-mobile">Contact</button></a>
+        </div>
+        <div class="menu">
+          <a href="/">About</a>
+          <a href="/">Services</a>
+          <a href="/">Projects</a>
+          <a href="/"><button>Contact</button></a>
+        </div>
+        <div class="hamburger-menu">
+          <a onclick="myFunction()"><img src="./images/icon-hamburger.svg" alt="mobile-menu"></a>
+        </div>
+      </div>
+      <div class="hero-header">
+        <header>We are creatives</header>
+        <img src="./images/icon-arrow-down.svg" alt="hero">
+      </div>
+    </div>
+    <!-- HERO -->
+
+    <!-- INFO -->
+    <div class="about">
+      <div class="about-row left">
+        <div class="about-content">
+          <header>Transform your brand</header>
+          <p>We are a full-service creative agency specializing in helping brands grow fast. 
+            Engage your clients through compelling visuals that do most of the marketing for you.</p>
+            <a><button class="btn btn-yellow">Learn more</button></a>
+          </div>
+          <div class="about-image">
+            <img src="./images/desktop/image-transform.jpg" alt="transform">
+          </div>
+      </div>
+      <div class="about-row right">
+        <div class="about-image">
+          <img src="./images/desktop/image-stand-out.jpg" alt="stand out">
+        </div>
+        <div class="about-content">
+          <header>Stand out to the right audience</header>
+          <p>Using a collaborative formula of designers, researchers, photographers, videographers, and copywriters, we’ll build and extend your brand in digital places. </p>
+            <a><button class="btn btn-red">Learn more</button></a>
+          </div>
+      </div>
+      <div class="about-row">
+        <div class="about-image">
+          <img src="./images/desktop/image-graphic-design.jpg" alt="image-graphic-design">
+          <div class="image-content">
+            <header>Graphic design</header>
+            <p>Great design makes you memorable. We deliver artwork that underscores your brand message and captures potential clients’ attention.</p>
+          </div>
+        </div>
+        <div class="about-image">
+          <img src="./images/desktop/image-photography.jpg" alt="photography">
+          <div class="image-content">
+            <header>Photography</header>
+            <p>Increase your credibility by getting the most stunning, high-quality photos that improve your business image.</p>
+          </div>
+        </div>     
+      </div>
+    </div>
+    <!-- INFO -->
+
+    <!-- Testimionals -->
+    <div class="testimionals">
+      <header>Client testimonials</header>
+      <div class="test-items">
+        <figure>
+          <img src="./images/image-emily.jpg" alt="Emily">
+          <figcaption>
+            <p>We put our trust in Sunnyside and they delivered, 
+              making sure our needs were met and deadlines were always hit.</p>
+              <header>Emily R.</header>
+              <span>Marketing Director</span>
+          </figcaption>
+        </figure>
+        <figure>
+          <img src="./images/image-thomas.jpg" alt="Thomas">
+          <figcaption>
+            <p>Sunnyside's enthusiasm coupled with their keen interest in our 
+              brand's success made it a satisfying and enjoyable experience.</p>
+              <header>Thomas S.</header>
+              <span>Chief Operating Officer</span>
+          </figcaption>
+        </figure>
+        <figure>
+          <img src="./images/image-jennie.jpg" alt="Jennie">
+          <figcaption>
+            <p>Incredible end result! Our sales increased over 400% when we 
+              worked with Sunnyside. Highly recommended!</p>
+              <header>Jennie F.</header>
+              <span>Business Owner</span>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+    <!-- Testimionals -->
+
+    <!-- Gallery -->
+    <div class="gallery">
+      <div class="gallery-item">
+        <img src="./images/desktop/image-gallery-milkbottles.jpg" alt="milk">
+      </div>
+      <div class="gallery-item">
+        <img src="./images/desktop/image-gallery-orange.jpg" alt="orange">
+      </div>
+      <div class="gallery-item">
+        <img src="./images/desktop/image-gallery-cone.jpg" alt="cone">
+      </div>
+      <div class="gallery-item">
+        <img src="./images/desktop/image-gallery-sugarcubes.jpg" alt="sugarcubes">
+      </div>
+    </div>
+    <!-- Gallery -->
+
+    <!-- Footer -->
+      <div class="footer">
+        <img src="./images/logo.svg">
+        <div class="footer-menu">
+          <a href="/">About</a>
+          <a href="/">Services</a>
+          <a href="/">Projects</a>
+        </div>
+        <div class="footer-social">
+          <a href="/">
+            <img src="./images/icon-facebook.svg" alt="facebook">
+          </a>
+          <a href="/">
+            <img src="./images/icon-instagram.svg" alt="instagram">
+          </a>
+          <a href="/">
+            <img src="./images/icon-twitter.svg" alt="twitter">
+          </a>
+          <a href="/">
+            <img src="./images/icon-pinterest.svg" alt="pinterest">
+          </a>
+        </div>
+      </div>
+    <!-- Footer -->
+
+  </main>
+  
+</body>
+<script src="./js/app.js"></script>
+</html>
