@@ -1,0 +1,252 @@
+
+//Font
+$Font-Manrope: 'Manrope', sans-serif;
+$Font-size: 15px;
+
+//Colors
+$Full-Slider-Bar: hsl(174, 77%, 80%);
+$Slider-Bg: hsl(174, 86%, 45%);
+$Discount-Bg: hsl(14, 92%, 95%);
+$Discount-Text: hsl(15, 100%, 70%);
+$CTA-Text: hsl(226, 100%, 87%);
+
+$Pricing-Bg: hsl(0, 0%, 100%);
+$Main-Bg: hsl(230, 100%, 99%);
+$Empty-Slider-Bar: hsl(224, 65%, 95%);
+$Toggle-Bg: hsl(223, 50%, 87%);
+$Text: hsl(225, 20%, 60%);
+$Text-CTA-Bg: hsl(227, 35%, 25%);
+
+
+$box-shadow: $Slider-Bg 0px 3px 18px;
+$box-shadow-2: $Text-CTA-Bg 0px 3px 8px;
+
+//responsive
+@mixin mobile {
+  @media screen and (max-width: 500px) {
+      @content;
+  }
+}
+
+
+body{
+    font-family: $Font-Manrope;
+    background-color: $Main-Bg;
+    background-image: url(../images/bg-pattern.svg);
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    
+    .container{
+        width: clamp(24rem, 100vw, 40rem);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+       
+
+        .top-header{
+            padding: 3rem 0;
+            text-align: center;
+            background-image: url(../images/pattern-circles.svg);
+            background-position: top center;
+            background-repeat: no-repeat;
+            header{
+                font-size: clamp(1.2rem, 5vw, 2rem);
+                font-weight: 800;
+            }
+            p{
+                font-size: clamp(.8rem, 2.5vw, 1rem);
+                margin: .4rem;
+                color: $Text;
+            }
+        }
+
+        .card{
+            background-color: $Pricing-Bg;
+            width: 70%;
+            padding: 2rem;
+            border-radius: 1rem;
+            
+            .card-header{
+                color: $Text;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                @include mobile {
+                  flex-direction: column;
+                }
+                header{
+                    font-size: 1rem;
+                    text-transform: uppercase;
+                    letter-spacing: .1rem;
+                    font-weight: 800;
+                }
+                p{
+                    display: flex;
+                    align-items: center;
+                    span{
+                        margin-right: .2rem;
+                        font-weight: 800;
+                        color: $Text-CTA-Bg;
+                        font-size: clamp(2rem , 5vw, 2rem);
+                    }  
+                }
+                
+            }
+        }
+
+        .pricing{
+            margin: 2rem 0;
+            .slider {
+                -webkit-appearance: none;
+                width: 100%;
+                height: .5rem;
+                background: $Empty-Slider-Bar;
+                outline: none;
+                opacity: 0.5;
+                border-radius: 2rem;
+                -webkit-transition: .2s;
+                transition: opacity .2s;
+              }
+              
+              .slider:hover {
+                opacity: 1;
+              }
+              
+              .slider::-webkit-slider-thumb {
+                -webkit-appearance: none;
+                appearance: none;
+                width: 2rem;
+                height: 2rem;
+                border-radius: 50%;
+                background-color: $Slider-Bg;
+                background-image: url(../images/icon-slider.svg);
+                background-position:center;
+                background-repeat: no-repeat;
+                box-shadow: $box-shadow;
+                cursor: pointer;
+              }
+              
+              .slider::-moz-range-thumb {
+                width: 2rem;
+                height: 2rem;
+                background: $Full-Slider-Bar;
+                cursor: pointer;
+              }
+        }
+
+        .billing{
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            margin: 2rem 0;
+            p{
+                color: $Text;
+                font-size: clamp(.6rem, 2.5vw, .8rem);
+                margin: .1rem;
+
+                .discount{
+                    background-color: $Discount-Bg;
+                    color: $Discount-Text;
+                    padding: .2rem .4rem;
+                    border-radius: 2rem;
+                    margin: .2rem;
+                }
+            }
+            
+            .switch {
+                position: relative;
+                display: inline-block;
+                width: 3rem;
+                height: 1.5rem;
+              }
+              
+              .switch input { 
+                opacity: 0;
+                width: 0;
+                height: 0;
+              }
+              
+              .slider {
+                position: absolute;
+                cursor: pointer;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background-color: $Empty-Slider-Bar;
+                -webkit-transition: .4s;
+                transition: .4s;
+              }
+              
+              .slider:before {
+                position: absolute;
+                content: "";
+                height: 1rem;
+                width: 1rem;
+                left: 1.8px;
+                bottom: 4px;
+                background-color: white;
+                -webkit-transition: .4s;
+                transition: .4s;
+              }
+              
+              input:checked + .slider {
+                background-color: $Slider-Bg;
+              }
+              
+              input:focus + .slider {
+                box-shadow: 0 0 1px $Slider-Bg;
+              }
+              
+              input:checked + .slider:before {
+                -webkit-transform: translateX(26px);
+                -ms-transform: translateX(26px);
+                transform: translateX(26px);
+              }
+              
+              .slider.round {
+                border-radius: 34px;
+              }
+              
+              .slider.round:before {
+                border-radius: 50%;
+              }
+
+        }
+
+        .card-footer{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            @include mobile {
+              flex-direction: column;
+              text-align: center;
+            }
+            ul{
+                margin: 0;
+                list-style-image: url(../images/icon-check.svg);
+                padding: 1rem;
+                color: $Text;
+                font-size: clamp(.6rem, 2.5vw, .8rem);
+                li{
+                    margin: .2rem 0;
+                }
+            }
+            button{
+                background-color: $Text-CTA-Bg;
+                color: $Main-Bg;
+                border: none;
+                padding: .5rem 2rem;
+                border-radius: 2rem;
+                box-shadow: $box-shadow-2;
+                cursor: pointer;
+            }
+        }
+    }
+}
