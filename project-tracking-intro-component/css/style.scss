@@ -1,0 +1,243 @@
+//Fons
+$Font-Barlow: 'Barlow', sans-serif;
+$Font-Barlow-Cond: 'Barlow Condensed', sans-serif;
+$Font-size: 18px;
+
+//Colors
+
+$Red: hsl(0, 100%, 68%);
+$Very-Dark-Blue: hsl(230, 29%, 20%);
+$Dark-Grayish-Blue: hsl(230, 11%, 40%);
+$Grayish-Blue: hsl(231, 7%, 65%);
+$Light-Grayish-Blue: hsl(207, 33%, 95%);
+
+
+//Responsive
+
+
+@mixin mobile {
+    @media screen and (max-width: 500px) {
+        @content;
+    }
+}
+
+body {
+    font-size: $Font-size;
+    font-family: $Font-Barlow;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    height: 100vh;
+
+    main {
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        overflow: hidden;
+
+        .bg {
+            position: absolute;
+            top: -20rem;
+            width: 100%;
+            height: 50rem;
+            border-radius: 5rem;
+            background-color: $Light-Grayish-Blue;
+            z-index: -1;
+
+            @include mobile {
+                right: -50%;
+                bottom: 0;
+            }
+        }
+
+        .navbar {
+            position: relative;
+            width: 90%;
+            height: 20vh;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            @include mobile {
+                height: 10vh;
+            }
+
+            .menu {
+
+                @include mobile {
+                    display: none;
+                }
+
+                a {
+                    color: $Very-Dark-Blue;
+                    font-size: 1.2rem;
+                    font-weight: 700;
+                    text-decoration: none;
+                    text-transform: uppercase;
+                    margin: 0 1rem;
+
+                    &:last-child {
+                        color: $Grayish-Blue
+                    }
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+
+                span {
+                    color: $Grayish-Blue;
+                }
+            }
+
+            .btn-hamburger {
+                display: none;
+                background-color: transparent;
+                border: none;
+                cursor: pointer;
+
+                img {
+                    width: 2rem;
+                }
+
+                @include mobile {
+                    display: block;
+                }
+            }
+
+            #mobile-navbar {
+                position: absolute;
+                width: 18rem;
+                padding: 1rem;
+                display: none;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                background-color: hsl(0, 100%, 100%);
+                top: 10vh;
+                right: 0;
+                border-radius: .5rem;
+                box-shadow: $Grayish-Blue 0px 7px 21px 0px;
+
+                a {
+                    font-family: $Font-Barlow-Cond;
+                    width: 100%;
+                    padding: .8rem 0;
+                    text-align: center;
+                    text-decoration: none;
+                    text-transform: uppercase;
+                    color: $Very-Dark-Blue;
+                    font-weight: 700;
+
+                    &:last-child {
+                        border-top: .1rem solid $Grayish-Blue ;
+                        color: $Grayish-Blue;
+                    }
+                }
+            }
+        }
+
+        .hero {
+            width: 90%;
+            margin-top: 5rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+
+            @include mobile {
+                flex-direction: column-reverse;
+            }
+
+            .hero-content {
+                flex: 1;
+
+                @include mobile {
+                    margin-top: 8rem;
+                }
+
+                header {
+                    font-size: clamp(.9rem, 2.5vw, 1rem);
+                    display: flex;
+                    align-items: center;
+                    font-family: $Font-Barlow-Cond;
+                    color: $Grayish-Blue;
+                    letter-spacing: .4rem;
+                    text-transform: uppercase;
+
+                    span {
+                        margin-right: 1rem;
+                        background-color: $Very-Dark-Blue;
+                        padding: .2rem .6rem;
+                        color: $Light-Grayish-Blue;
+                        font-weight: 700;
+                        border-radius: 2rem;
+                        letter-spacing: .1rem;
+                    }
+                }
+
+                h1 {
+                    color: $Very-Dark-Blue;
+                    font-size: clamp(1.6rem, 5vw, 4rem);
+                    font-weight: 700;
+                    text-transform: uppercase;
+                }
+
+                p {
+                    color: $Dark-Grayish-Blue;
+                }
+
+                .buttons {
+                    margin: 4rem 0;
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-start;
+                    gap: 1rem;
+
+                    button {
+                        padding: .8rem 2rem;
+                        border: none;
+                        border-radius: .2rem;
+                        background-color: transparent;
+                        cursor: pointer;
+
+                        &:hover {
+                            opacity: .8;
+                        }
+
+                        a {
+                            font-size: 1rem;
+                            font-family: $Font-Barlow-Cond;
+                            color: $Grayish-Blue;
+                            letter-spacing: .2rem;
+                            text-transform: uppercase;
+                            text-decoration: none;
+                        }
+
+                        &.btn-red {
+                            background-color: $Red;
+
+                            a {
+                                color: $Light-Grayish-Blue;
+                                font-weight: 700;
+                                letter-spacing: .1rem;
+                            }
+                        }
+                    }
+                }
+            }
+
+
+            .hero-image {
+                flex: 1;
+
+                img {
+                    width: 150%;
+                    object-fit: fill;
+                }
+            }
+        }
+    }
+}

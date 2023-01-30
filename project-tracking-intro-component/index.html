@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Frontend Mentor | Project tracking intro component</title>
+  </head>
+  <body>
+    <main>
+      <div class="navbar">
+        <div class="logo">
+          <img src="./images/logo.svg" />
+        </div>
+        <div class="menu">
+          <a href="">Product</a>
+          <a href="">Features</a>
+          <a href="">Pricing</a>
+          <a href=""><span>.</span></a>
+          <a href="">Login</a>
+        </div>
+        <button class="btn-hamburger" onclick="Toggle()">
+          <img src="./images/icon-hamburger.svg" />
+        </button>
+        <div id="mobile-navbar">
+          <a href="">Product</a>
+          <a href="">Features</a>
+          <a href="">Pricing</a>
+          <a href="">Login</a>
+        </div>
+      </div>
+      <div class="hero">
+        <div class="hero-content">
+          <header><span>New</span>Monograph Dashboard</header>
+          <h1>Powerful insights into your team</h1>
+          <p>Project planning and time tracking for agile teams</p>
+          <div class="buttons">
+            <button class="btn-red"><a href="#">Schedule a demo</a></button>
+            <button class="btn-white">
+              <a href="#">to see a live preview</a>
+            </button>
+          </div>
+        </div>
+        <div class="hero-image">
+          <div class="bg"></div>
+          <img src="./images/illustration-devices.svg" />
+        </div>
+      </div>
+    </main>
+  </body>
+  <script>
+    function Toggle() {
+      let x = document.getElementById("mobile-navbar");
+      if (x.style.display === "flex") {
+        x.style.display = "none";
+      } else {
+        x.style.display = "flex";
+      }
+    }
+  </script>
+</html>
