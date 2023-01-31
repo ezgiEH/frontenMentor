@@ -1,0 +1,263 @@
+//Fonts 
+$Font-Inter: 'Inter', sans-serif;
+$Font-size: 14px;
+
+$Animation: all 0.5s ease;
+$Border-radius: .5rem;
+//Colors
+// ### Primary
+$Lime-Green: hsl(163, 72%, 41%);
+$Bright-Red: hsl(356, 69%, 56%);
+
+$Facebook: hsl(208, 92%, 53%);
+$Twitter: hsl(203, 89%, 53%);
+// $Instagram: linear-gradient(to left, hsl(37, 97%, 70%), hsl(329, 70%, 58%));
+$Instagram: hsl(37, 97%, 70%);
+$YouTube: hsl(348, 97%, 39%);
+
+// #### Dark Theme
+
+$Toggle-Dark: linear-gradient(90deg, hsl(210, 78%, 56%) 10%, hsl(146, 68%, 55%) 60%);
+// #### Light Theme
+$Toggle-Light: hsl(230, 22%, 74%);
+
+// #### Dark Theme
+
+$BG: hsl(230, 17%, 14%);
+$Top-BG-Pattern: hsl(232, 19%, 15%);
+$Card-BG: hsl(228, 28%, 20%);
+$Text: hsl(228, 34%, 66%);
+$White-Text: hsl(0, 0%, 100%);
+
+// #### Light Theme
+
+$White-BG: hsl(0, 0%, 100%);
+$Top-BG-Light-Pattern: hsl(225, 100%, 98%);
+$Light-Card-BG: hsl(227, 47%, 96%);
+$Light-Text: hsl(228, 12%, 44%);
+$Light-Text-2: hsl(230, 17%, 14%);
+
+
+body{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    min-height: 100vh;
+    font-family: $Font-Inter;
+    font-size: $Font-size;
+  
+    .container{
+        width: 80vw;
+        display: flex;
+        flex-direction: column;
+        span{
+            display: flex;
+            align-items: center;
+            font-weight: 700;
+            gap: .5rem;
+            &.up{
+                color: $Lime-Green;
+            }
+            &.down{
+                color:$Bright-Red;
+            }
+        }
+        .top{
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+
+            .switcher{
+                flex: 1;
+                display: flex;
+                align-items: center;
+                justify-content: end;
+                input[type=checkbox]{
+                    height: 0;
+                    width: 0;
+                    visibility: hidden;
+                }
+                label {
+                    cursor: pointer;
+                    text-indent: -9999px;
+                    width: 3rem;
+                    height: 1.5rem;
+                    background: $Toggle-Light;
+                    display: block;
+                    border-radius: 10rem;
+                    position: relative;
+                }
+                label:after {
+                    content: '';
+                    position: absolute;
+                    top: .15rem;
+                    left: .2rem;
+                    width: 1.2rem;
+                    height: 1.2rem;
+                    background: $White-BG;
+                    border-radius: 10rem;
+                    transition: 0.3s;
+                }
+                  
+                input:checked + label {
+                    background: $Toggle-Dark
+                }
+                  
+                input:checked + label:after {
+                    left: calc(100% - 2px);
+                    transform: translateX(-100%);
+                    background: $Card-BG;
+                }
+                  
+                label:active:after {
+                    width: 2rem;
+                }
+            }
+           
+        }
+        .big-cards{
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            margin: 2rem 0;
+            gap: 2rem;
+            .card{
+                min-width: 14.5rem;
+                min-height: 20vh;
+                padding: 1rem;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                border-radius: $Border-radius;
+                overflow: hidden;
+                cursor: pointer;
+                &:hover{
+                    filter:saturate(2)
+                }
+                &.facebook{
+                    border-top: .4rem solid $Facebook;
+                }
+                &.twitter{
+                    border-top: .4rem solid $Twitter;
+                }
+                &.instagram{
+                    border-top:.4rem solid $Instagram;
+                    ;
+                }
+                &.youtube{
+                    border-top: .4rem solid $YouTube;
+                }
+
+               
+                .card-name{
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    gap: .5rem;
+                    p{
+                        font-size: 1rem;
+                        text-transform: lowercase;
+                        letter-spacing: 0;
+                    }
+                }
+                header{
+                    font-size: 3rem;
+                    font-weight: 700;
+                }
+                p{
+                    font-size: clamp(.6rem, 4vw, 1rem);
+                    text-transform: uppercase;
+                    letter-spacing: .2rem;
+                }
+                
+            }
+        }
+
+        .small-cards{
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            margin: 2rem 0;
+            gap: 2rem;
+            .card{
+                min-width: 14.5rem;
+                min-height: 10vh;
+                padding: 1rem;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                border-radius: $Border-radius;
+                cursor: pointer;
+                &:hover{
+                    filter:saturate(2)
+                }
+                .card-name{
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    header{
+                        font-weight: 700;
+                    }
+                }
+                .card-info{
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    header{
+                        font-size: 2rem;
+                        font-weight: 700;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@mixin dark-mode {
+    background-color: $BG;
+    color: $White-Text;
+    .top{
+        p{
+            color: $Text;
+        }
+    }
+    .card{
+        background-color: $Card-BG;
+        color: $Text;
+        header{
+            color:$White-Text;
+        }
+    }
+  }
+  
+@mixin light-mode {
+    background-color: $White-BG;
+    h2{
+        color: $Light-Text;
+    }
+    .card{
+        background-color: $Light-Card-BG;
+        p{
+            color: $Light-Text;
+        }
+        
+    }
+}
+  
+  .dark-mode {
+    @include dark-mode;
+  }
+  
+  .light-mode {
+    @include light-mode;
+  }
+  
+  @media (prefers-color-scheme: dark) {
+    body {
+      @include dark-mode;
+    }
+  }

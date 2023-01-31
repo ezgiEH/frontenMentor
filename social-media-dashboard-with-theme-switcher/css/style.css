@@ -1,0 +1,212 @@
+body {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  min-height: 100vh;
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+}
+body .container {
+  width: 80vw;
+  display: flex;
+  flex-direction: column;
+}
+body .container span {
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+  gap: 0.5rem;
+}
+body .container span.up {
+  color: hsl(163deg, 72%, 41%);
+}
+body .container span.down {
+  color: hsl(356deg, 69%, 56%);
+}
+body .container .top {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+body .container .top .switcher {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+body .container .top .switcher input[type=checkbox] {
+  height: 0;
+  width: 0;
+  visibility: hidden;
+}
+body .container .top .switcher label {
+  cursor: pointer;
+  text-indent: -9999px;
+  width: 3rem;
+  height: 1.5rem;
+  background: hsl(230deg, 22%, 74%);
+  display: block;
+  border-radius: 10rem;
+  position: relative;
+}
+body .container .top .switcher label:after {
+  content: "";
+  position: absolute;
+  top: 0.15rem;
+  left: 0.2rem;
+  width: 1.2rem;
+  height: 1.2rem;
+  background: hsl(0deg, 0%, 100%);
+  border-radius: 10rem;
+  transition: 0.3s;
+}
+body .container .top .switcher input:checked + label {
+  background: linear-gradient(90deg, hsl(210deg, 78%, 56%) 10%, hsl(146deg, 68%, 55%) 60%);
+}
+body .container .top .switcher input:checked + label:after {
+  left: calc(100% - 2px);
+  transform: translateX(-100%);
+  background: hsl(228deg, 28%, 20%);
+}
+body .container .top .switcher label:active:after {
+  width: 2rem;
+}
+body .container .big-cards {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin: 2rem 0;
+  gap: 2rem;
+}
+body .container .big-cards .card {
+  min-width: 14.5rem;
+  min-height: 20vh;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  cursor: pointer;
+}
+body .container .big-cards .card:hover {
+  filter: saturate(2);
+}
+body .container .big-cards .card.facebook {
+  border-top: 0.4rem solid hsl(208deg, 92%, 53%);
+}
+body .container .big-cards .card.twitter {
+  border-top: 0.4rem solid hsl(203deg, 89%, 53%);
+}
+body .container .big-cards .card.instagram {
+  border-top: 0.4rem solid hsl(37deg, 97%, 70%);
+}
+body .container .big-cards .card.youtube {
+  border-top: 0.4rem solid hsl(348deg, 97%, 39%);
+}
+body .container .big-cards .card .card-name {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+body .container .big-cards .card .card-name p {
+  font-size: 1rem;
+  text-transform: lowercase;
+  letter-spacing: 0;
+}
+body .container .big-cards .card header {
+  font-size: 3rem;
+  font-weight: 700;
+}
+body .container .big-cards .card p {
+  font-size: clamp(0.6rem, 4vw, 1rem);
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+}
+body .container .small-cards {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin: 2rem 0;
+  gap: 2rem;
+}
+body .container .small-cards .card {
+  min-width: 14.5rem;
+  min-height: 10vh;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+body .container .small-cards .card:hover {
+  filter: saturate(2);
+}
+body .container .small-cards .card .card-name {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+body .container .small-cards .card .card-name header {
+  font-weight: 700;
+}
+body .container .small-cards .card .card-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+body .container .small-cards .card .card-info header {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.dark-mode {
+  background-color: hsl(230deg, 17%, 14%);
+  color: hsl(0deg, 0%, 100%);
+}
+.dark-mode .top p {
+  color: hsl(228deg, 34%, 66%);
+}
+.dark-mode .card {
+  background-color: hsl(228deg, 28%, 20%);
+  color: hsl(228deg, 34%, 66%);
+}
+.dark-mode .card header {
+  color: hsl(0deg, 0%, 100%);
+}
+
+.light-mode {
+  background-color: hsl(0deg, 0%, 100%);
+}
+.light-mode h2 {
+  color: hsl(228deg, 12%, 44%);
+}
+.light-mode .card {
+  background-color: hsl(227deg, 47%, 96%);
+}
+.light-mode .card p {
+  color: hsl(228deg, 12%, 44%);
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: hsl(230deg, 17%, 14%);
+    color: hsl(0deg, 0%, 100%);
+  }
+  body .top p {
+    color: hsl(228deg, 34%, 66%);
+  }
+  body .card {
+    background-color: hsl(228deg, 28%, 20%);
+    color: hsl(228deg, 34%, 66%);
+  }
+  body .card header {
+    color: hsl(0deg, 0%, 100%);
+  }
+}/*# sourceMappingURL=style.css.map */
