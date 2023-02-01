@@ -1,0 +1,184 @@
+//Font
+$Font-Montserrat: 'Montserrat', sans-serif;
+$Font-size: 15px;
+$Font-Weight: 700;
+
+//Colors
+$Linear-Gradient: linear-gradient(120deg, hsl(236, 72%, 79%) 20%, hsl(237, 63%, 64%) 100%);
+$Very-Light-Grayish-Blue: hsl(240, 78%, 98%);
+$Light-Grayish-Blue: hsl(234, 14%, 74%);
+$Grayish-Blue: hsl(233, 13%, 49%);
+$Dark-Grayish-Blue: hsl(232, 13%, 33%);
+
+body{
+    font-family: $Font-Montserrat;
+    font-size: $Font-size;
+    color: $Grayish-Blue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: $Very-Light-Grayish-Blue;
+    background-image: url(../images/bg-top.svg), url(../images/bg-bottom.svg);
+    background-repeat: no-repeat, no-repeat;
+    background-position: right top, left bottom;
+    .container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .top-header{
+            text-align: center;
+            margin: 3rem 0;
+            h1{
+                font-size: 3rem;
+            }
+            .switch{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 1rem;
+
+            }
+            input[type=checkbox]{
+                height: 0;
+                width: 0;
+                visibility: hidden;
+            }
+            label{
+                cursor: pointer;
+                text-indent: -9px;
+                width: 4rem;
+                height: 2rem;
+                background-color: $Grayish-Blue;
+                display: block;
+                border-radius: 10rem;
+                position: relative;
+            }
+            label:after {
+                content: '';
+                position: absolute;
+                top: .2rem;
+                left: .2rem;
+                width: 1.5rem;
+                height: 1.5rem;
+                background: white;
+                border-radius: 10rem;
+                transition: 0.3s;
+            }
+            input:checked + label {
+                background: $Linear-Gradient
+            }
+              
+            input:checked + label:after {
+                left: calc(100% - 2px);
+                transform: translateX(-100%);
+                background: hsl(236, 72%, 79%);
+            }
+              
+            label:active:after {
+                width: 2rem;
+            }
+        }
+        .cards{
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            // gap: 1rem;
+            .card{
+                min-width: 18rem;
+                padding: 2rem;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-between;
+                border-radius: 1rem;
+                header{
+                    font-size: 1.2rem;
+                }
+                span{
+                    font-size: 4rem;
+                    color: $Dark-Grayish-Blue;
+                    margin: 1.5rem 0; 
+                }
+                .price-monthly{
+                    display: block;
+                }
+                .price-annually{
+                    display: none;
+                }
+                hr{
+                    width: 100%;
+                    color: $Very-Light-Grayish-Blue;
+                    border-style: solid ;
+                    height: .1px;
+                }
+                p{
+                    font-size: 1.2rem;
+                    margin: 0;
+                }
+                &.card-white{
+                    background-color: white;
+                    height: 28rem;
+                }
+                &:nth-child(1){
+                    border-radius: 1rem 0 0 1rem;
+                }
+                &:nth-child(3){
+                    border-radius: 0 1rem 1rem 0;
+                }
+                &.card-purple{
+                    background: $Linear-Gradient;
+                    height: 30rem;
+                    color: white;
+                    span{
+                        color: white;
+                    }
+                    hr{
+                        color: hsl(236, 72%, 79%);
+                    }
+                    
+                }
+                button{
+                    width: 100%;
+                    padding: .8rem;
+                    margin: 1rem 0;
+                    background: $Linear-Gradient;
+                    border: .1rem solid hsl(236, 72%, 79%);
+                    border-radius: .5rem;
+                    cursor: pointer;
+
+                    &.btn-white{
+                        background: white;
+                        a{
+                            color: hsl(236, 72%, 79%);
+                        }
+                        &:hover{
+                            background: transparent;
+                            a{
+                                color: white;
+                            }
+                        }
+                    }
+                    a{
+                        color: white;
+                        font-weight: 700;
+                        font-size: 1rem;
+                        letter-spacing: .2rem;
+                        text-decoration: none;
+                        text-transform: uppercase;
+                    }
+
+                    &:hover{
+                        background: transparent;
+                        border: .1rem solid hsl(236, 72%, 79%);
+                        a{
+                            color: hsl(236, 72%, 79%);
+                        }
+                    }
+                }
+            
+            }
+        }
+    }
+}
